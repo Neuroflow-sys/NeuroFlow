@@ -1,147 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NeuroFlow</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroFlow - AI Agents That Sell Themselves</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="NeuroFlow empowers small businesses with AI agents that learn, speak, and sell by understanding your website and pitching directly to you.">
+  <meta name="keywords" content="AI, sales agent, chatbot, automation, small business, NeuroFlow">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="NeuroFlow - AI Agents That Sell Themselves">
+  <meta property="og:description" content="Empowering small businesses with AI agents that learn, speak, and sell by understanding your website and pitching directly to you.">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=NeuroFlow">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
+  <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #1e293b;
-      color: white;
-    }
-
-    header {
-      text-align: center;
-      padding: 5rem 2rem;
-      background: #0f172a;
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: #38bdf8;
-      margin-bottom: 1rem;
-    }
-
-    p.description {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      margin-bottom: 2rem;
-      line-height: 1.6;
-    }
-
-    .cta-button {
-      padding: 1rem 2rem;
-      background-color: #38bdf8;
-      color: #000;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 2rem;
-      transition: 0.3s background-color ease;
-    }
-
-    .cta-button:hover {
-      background-color: #0ea5e9;
-    }
-
-    .features {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-
-    .feature {
-      background-color: #334155;
-      padding: 2rem;
-      border-radius: 12px;
-      width: 250px;
-      transition: 0.3s transform ease;
-    }
-
-    .feature:hover {
-      transform: translateY(-10px);
-    }
-
-    .feature h3 {
-      font-size: 1.5rem;
-      color: #38bdf8;
-      margin-bottom: 1rem;
-    }
-
-    .feature p {
-      font-size: 1rem;
-      color: #94a3b8;
-    }
-
-    footer {
-      background-color: #0f172a;
-      text-align: center;
-      padding: 1rem 0;
-      color: #94a3b8;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .cta-button {
-        font-size: 1rem;
-      }
-
-      .features {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .feature {
-        width: 90%;
-        margin-bottom: 2rem;
-      }
-    }
+    body { font-family: Arial, sans-serif; background: #f0f4f8; margin: 0; padding: 0; }
+    header { position: relative; background: url('https://via.placeholder.com/1200x600.png?text=Your+Hero+Image') no-repeat center/cover; color: white; padding: 4rem 2rem; text-align: center; }
+    header::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.7); z-index: 1; }
+    header * { position: relative; z-index: 2; }
+    h1 { margin: 0; font-size: 3rem; }
+    .hero-cta { margin-top: 1.5rem; }
+    .hero-cta a { background: #0f766e; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 6px; font-size: 1.2rem; transition: background 0.3s; }
+    .hero-cta a:hover { background: #0d5f5a; }
+    section { padding: 2rem; text-align: center; }
+    .chat-wrapper { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; max-width: 1200px; margin: 0 auto; }
+    .chat-sample { background: white; padding: 1.25rem 1.5rem; border-radius: 8px; width: 280px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: left; }
+    .chat-sample p { margin: 0.75rem 0; line-height: 1.5; }
+    .bot { color: #0f766e; font-weight: bold; }
+    .user { color: #1e40af; font-weight: bold; }
+    .btn { background: #0f766e; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; margin-top: 2rem; transition: background 0.3s; }
+    .btn:hover { background: #0d5f5a; }
+    .how-it-works { background: #e2e8f0; padding: 2rem; margin: 2rem auto; border-radius: 8px; max-width: 800px; text-align: left; }
+    .how-it-works h3 { color: #0f172a; }
+    .how-it-works ol { margin: 1rem 0 0 1.5rem; text-align: left; color: #334155; }
+    .testimonials { background: white; padding: 2rem; margin: 2rem auto; border-radius: 8px; max-width: 800px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: left; }
+    .testimonial { margin-bottom: 1.5rem; }
+    .testimonial p { margin: 0.5rem 0; }
+    footer { background: #1e293b; color: white; padding: 1rem; text-align: center; }
   </style>
+  <!-- Insert Analytics Code Here -->
 </head>
 <body>
-
   <header>
     <h1>NeuroFlow</h1>
-    <p class="description">
-      NeuroFlow is your AI-powered sales assistant that scans your website, learns about your business, and pitches it for you. Automate your sales process today with our simple, AI-driven solution.
-    </p>
-    <a href="mailto:hello@neuroflow.ml" class="cta-button">Book a Free Demo</a>
+    <p>Empowering small businesses with AI agents that learn, speak, and sell — by understanding your website and pitching directly to you.</p>
+    <div class="hero-cta">
+      <a href="#contact">Watch a Demo</a>
+    </div>
   </header>
 
-  <div class="features">
-    <div class="feature">
-      <h3>Instant Learning</h3>
-      <p>Scans and understands your website’s content for personalized outreach.</p>
+  <section>
+    <h2>Live Conversation Samples</h2>
+    <div class="chat-wrapper">
+      <div class="chat-sample">
+        <p class="user">Yoga Studio Owner:</p>
+        <p class="bot">AI: I noticed that your class schedules are hard to find. I can help visitors quickly book sessions and learn about your unique offerings.</p>
+        <p class="user">Owner:</p>
+        <p class="bot">AI: Plus, I can suggest classes based on user preferences and answer FAQs in real-time.</p>
+      </div>
+      <div class="chat-sample">
+        <p class="user">Coffee Shop Owner:</p>
+        <p class="bot">AI: Your menu and specials could be showcased more prominently. I can guide customers through your offerings and even take orders.</p>
+        <p class="user">Owner:</p>
+        <p class="bot">AI: I’ll also help drive loyalty by integrating with your rewards program.</p>
+      </div>
+      <div class="chat-sample">
+        <p class="user">Fitness Trainer:</p>
+        <p class="bot">AI: I see your training packages aren’t clearly highlighted. I can help clients schedule sessions and offer personalized fitness tips.</p>
+        <p class="user">Trainer:</p>
+        <p class="bot">AI: I can integrate with your calendar to show real-time availability and promote special offers.</p>
+      </div>
+      <div class="chat-sample">
+        <p class="user">Restaurant Owner:</p>
+        <p class="bot">AI: Your menu could be more interactive. I can showcase popular dishes, help with reservations, and manage orders.</p>
+        <p class="user">Owner:</p>
+        <p class="bot">AI: I’ll provide quick answers to customer inquiries, boosting overall satisfaction.</p>
+      </div>
     </div>
-    <div class="feature">
-      <h3>Automated Outreach</h3>
-      <p>Automatically reaches out to visitors and pitches your business like a real sales agent.</p>
+    <a href="#contact"><button class="btn">Get Your AI Agent Now</button></a>
+  </section>
+
+  <section>
+    <h2>How It Works</h2>
+    <div class="how-it-works">
+      <h3>Step-by-Step Process:</h3>
+      <ol>
+        <li><strong>Scan:</strong> NeuroFlow analyzes your website's content and structure.</li>
+        <li><strong>Learn:</strong> It identifies key information and gaps in your user engagement.</li>
+        <li><strong>Pitch:</strong> The AI agent delivers a dynamic, voice-driven pitch tailored to your business needs.</li>
+      </ol>
     </div>
-    <div class="feature">
-      <h3>Data-Driven Results</h3>
-      <p>Tracks conversations and optimizes sales based on interaction data.</p>
+  </section>
+
+  <section>
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p><em>"NeuroFlow transformed our booking process. Our clients love the instant responses and personalized service."</em></p>
+        <p>- Alex, Yoga Studio Owner</p>
+      </div>
+      <div class="testimonial">
+        <p><em>"Our sales increased by 25% within a month. NeuroFlow's proactive approach makes all the difference."</em></p>
+        <p>- Jamie, Restaurant Owner</p>
+      </div>
     </div>
-  </div>
+  </section>
 
   <footer>
     &copy; 2025 NeuroFlow. All rights reserved.
   </footer>
-
 </body>
 </html>
